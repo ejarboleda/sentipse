@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	h1= title
+	p#subtitle Welcome to #{title}
+
+	p
+		form
+			label(for='username') Username: 
+			input(type='text', id='username')
+			span(id='username_feedback')
+
+	p
+		form
+			label(for='from_date') From Date:
+			input(type='date', id='from_date')
+			br
+			p(id='date_it') DATE IT!
+			br
+			span(id='from_date_feedback')

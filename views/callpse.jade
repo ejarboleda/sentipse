@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	h1= title
+	p#subtitle This is the result of the OpenPSE Call to #{url}
+
+	//p#results #{body}
+	
+	table
+		thead
+			th Symbol
+			th Name
+			th Listing Date
+		for company in body
+			tr
+				td #{company.symbol}
+				td #{company.name}
+				td #{company.listing_date}
